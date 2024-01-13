@@ -42,7 +42,7 @@ async function catWalk() {
   const centerPos = (window.innerWidth - img.width) / 2;
   const stopPos = window.innerWidth;
 
-  while (true) {
+  while (startPos < stopPos) { // since startPos will always be less than stopPos, cat will walk/dance in an endless loop
     await walk(img, startPos, centerPos)
     await dance(img)
     await walk(img, centerPos, stopPos)

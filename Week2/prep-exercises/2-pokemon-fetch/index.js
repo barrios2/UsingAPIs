@@ -26,9 +26,8 @@ async function fetchJSON(url) {
     if (!response.ok) {
       throw new Error(`HTTP error ${response.status}`);  
     }
-
     const jsonData = await response.json();
-      return jsonData;
+    return jsonData;
   } catch (error) {
     console.log(`Failed to fetch: ${error.message}`);
   }
@@ -70,7 +69,7 @@ function main() {
       const data = await fetchJSON(url);
       renderResults(data);
     } catch (error) {
-      renderError(error)
+      renderError(error);
     }
   });
 }
